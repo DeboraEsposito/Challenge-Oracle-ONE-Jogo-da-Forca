@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Jogo da Forca</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!--FONTS-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
   </head>
+
   <body>
-    <div style="text-align:center; margin: 50px 0px;">
-      <h1 class="titulo">Jogo da Forca</h1>
-      <button class="btn" id="iniciar-jogo">INICIAR JOGO</button>
+  <header>
+    <img src="./image/logo_alura.svg" id="logo-alura" alt="Logo da alura">
+    <h1>JOGO DA FORCA</h1>
+  </header>
+  <div class="home">
+    <div class="img-home">
+      <img src="./image/img_home.png" class="imagem" alt="imagem introdutoria">     
     </div>
-    <div style="text-align:center">
-      <input class="text-input" type="text" id="input-nova-palavra" placeholder="Escreva uma nova palavra">
-      <button class="btn" id="nova-palavra">ADICIONAR PALAVRA</button> 
-    </div>
-    <div style="text-align:center;">
-      <canvas id="forca" height="800px" width="1200px"></canvas>
-    </div>
-    <script type="text/javascript" src="canvas.js"></script>
-    <script type="text/javascript" src="forca.js"></script>
+    <button class="button blue">Começar a jogar</button>
+    <button class="button white">Adcionar nova Palavra</button>
+  </div>
+  <footer class="rodape-prin">
+    <section id='botao-cont'>
+      <h4 id="desenvonvedor">&copy; Débora Espósito</h4> 
+      <a href="https://www.linkedin.com/in/debora-esposito/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+      <a href="https://github.com/DeboraEsposito" target="_blank"><img src="	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>  
+    </section>
+  </footer>
+    <script type="text/javascript" src="./js/canvas.js"></script>
+    <script type="text/javascript" src="./js/forca.js"></script>
   </body>
 </html>

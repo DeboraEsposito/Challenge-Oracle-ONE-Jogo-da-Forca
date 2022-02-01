@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.box {
+  display: block;
+  margin: 2rem;
+  border-color: #fff;
+  text-align: center;
+}
+
+#palavra {
+  width: 50rem;
+  height: 9rem;
+  text-align: center;
+  border-color: turquoise;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.imagem {
+  padding-left: 1rem;
+}

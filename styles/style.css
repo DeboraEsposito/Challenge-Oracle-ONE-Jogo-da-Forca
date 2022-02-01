@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(239, 241, 245);
+}
+
+header {
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+  color: rgb(24, 24, 83);
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'Architects Daughter', cursive;
+  padding-right: 7rem;
+}
+
+.home {
+  text-align: center;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+.img-home {
+  padding: 1.5rem;
+}
+
+#logo-alura {
+  width: 2rem;
+}
+
+.button {
+  width: 15rem;
+  height: 3.5rem;
+  margin: 1rem;
+  border-radius: 15px;
+  font-size: 15px;
+  border-color: aqua;
+}
+
+.button.blue {
+  background-color: rgb(7, 111, 248);
+  color: white;
+}
+
+.button.blue:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.89);
+  color: rgb(7, 111, 248);
+}
+
+.button.white {
+  background-color: white;
+  color: rgb(7, 111, 248);
+
+}
+
+.button.white:hover {
+  cursor: pointer;
+  background-color: rgb(7, 111, 248);
+  color: white;
+}
+
+.rodape-prin {
+  background-color: #fff;
+  clear: both;
+  padding: 10px;
+  color: rgb(92, 91, 91);
+  font-size: 15px;
+  font-family: "arial", sans-serif;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+#desenvolvedor {
+  margin: 0;
+}
