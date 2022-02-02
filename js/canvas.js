@@ -1,7 +1,7 @@
 var tela = document.querySelector('canvas');
 var pincel = tela.getContext('2d');
-pincel.fillStyle = 'rgb(239, 241, 245)';
-pincel.fillRect(0, 0, 600, 400);
+pincel.fillStyle = "white";
+pincel.fillRect(20, 0, 800, 400);
 
 function desenhaCirculo(x, y, raio, cor) {
 
@@ -11,16 +11,61 @@ function desenhaCirculo(x, y, raio, cor) {
   pincel.fill();
 }
 
-function desenhaPoste(x, y, tamanho, cor){
+function desenhaRetangulo(x, y, tamanho1, tamanho2, cor){
 
     pincel.fillStyle = cor;
-    pincel.fillRect(x , y, tamanho, tamanho);
+    pincel.fillRect(x , y, tamanho1, tamanho2);
     pincel.fillStroke = cor;
-    pincel.strokeRect(x , y, tamanho, tamanho);
-
-  
+    pincel.strokeRect(x , y, tamanho1, tamanho2);  
 }
 
-desenhaPoste(50, 60, 200, 20, "black");
+function desenhaBracoD(){
+  pincel.fillStyle = 'brown';
+  pincel.beginPath();
+  pincel.moveTo(180, 180);
+  pincel.lineTo(142, 200);  
+  pincel.stroke();
+}
 
-desenhaCirculo(200, 200, 20, "red");
+function desenhaBracoE(){
+  pincel.fillStyle = 'brown';
+  pincel.beginPath();
+  pincel.moveTo(215, 205 );
+  pincel.lineTo(180, 180);  
+  pincel.stroke();
+}
+
+function desenhapernaE(){
+  pincel.fillStyle = 'brown';
+  pincel.beginPath();
+  pincel.moveTo(220, 265 );
+  pincel.lineTo(183, 228);  
+  pincel.stroke();
+}
+
+function desenhaPernaD(){
+  pincel.fillStyle = 'brown';
+  pincel.beginPath();
+  pincel.moveTo(176, 228 );
+  pincel.lineTo(145, 270);  
+  pincel.stroke();
+}
+
+desenhaRetangulo(60, 70, 20, 330, "brown");
+desenhaRetangulo(50, 80, 180, 20, "brown");
+desenhaRetangulo(180, 99, 2, 80, "brown");
+desenhaCirculo(180, 150, 18, "brown")
+desenhaCirculo(180, 150, 16, "white")
+desenhaRetangulo(178, 168, 3, 60, "brown");
+desenhaRetangulo(140, 380, 40, 3, "black" )
+desenhaBracoD()
+desenhaBracoE()
+desenhapernaE()
+desenhaPernaD()
+
+
+
+
+
+
+

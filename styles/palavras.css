@@ -19,7 +19,8 @@ body {
   width: 50rem;
   height: 9rem;
   text-align: center;
-  border-color: turquoise;
+  background-color: rgb(239, 241, 245);
+  border: solid 1px transparent;
   border-radius: 25px;
   margin-bottom: 1rem;
   margin-top: 1rem;
