@@ -1,6 +1,6 @@
 var tela = document.querySelector('canvas');
 var pincel = tela.getContext('2d');
-pincel.fillStyle = "white";
+pincel.fillStyle = "rgb(239, 241, 245)";
 pincel.fillRect(20, 0, 800, 400);
 
 function desenhaCirculo(x, y, raio, cor) {
@@ -54,10 +54,9 @@ function desenhaPernaD(){
 desenhaRetangulo(60, 70, 20, 330, "brown");
 desenhaRetangulo(50, 80, 180, 20, "brown");
 desenhaRetangulo(180, 99, 2, 80, "brown");
-desenhaCirculo(180, 150, 18, "brown")
+desenhaCirculo(180, 150, 18, "black")
 desenhaCirculo(180, 150, 16, "white")
-desenhaRetangulo(178, 168, 3, 60, "brown");
-desenhaRetangulo(140, 380, 40, 3, "black" )
+desenhaRetangulo(178, 168, 3, 60, "black");
 desenhaBracoD()
 desenhaBracoE()
 desenhapernaE()
