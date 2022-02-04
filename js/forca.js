@@ -1,5 +1,26 @@
 var palavraSorteada = [];
 var palavras = ["BANANA", "AMENDOIN", "ALURA", "CIDADE", "PREDINISOLONA", "CARRO", "FAZENDA", "AVENIDA", "UNIDADE", "SECULO"]; 
+var contador = 0;
+var novaPalavra;
+
+
+
+botaoJogar.addEventListener("click", function startGame(event){
+  event.preventDefault();
+  botão = document.querySelector('.blue');
+
+ modal = document.querySelector(".modal")
+
+ 
+
+  sorteiaPalavra();
+  dividePalavra();
+  criaInputLetra();
+
+
+    
+})
+
 
  
 function sorteiaPalavra(){
@@ -21,16 +42,16 @@ function dividePalavra(){
 }
 
 function criaInputLetra(){
-
-  for(i = 0; i < novaPalavra.length; i++){
+  
     var inputLetra = document.createElement('input');
-    inputLetra.classList.add("input-letra");
-    
-    return inputLetra;
+    var div = document.getElementById('teste')
+    inputLetra.classList.add("input-letras");
+    div.appendChild(inputLetra);    
+  }   
 
-  } 
+  
 
-}
+
 
 
 
