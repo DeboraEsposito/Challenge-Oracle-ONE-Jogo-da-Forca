@@ -19,14 +19,17 @@
 
   </head>
 
-  <body>    
-      <div class="modal">
-        <img src="./image/img_home.png" id="img-home" alt="imagem forca"> 
-        <div class="box-button">
-          <button class="button blue">Começar a jogar</button>
-          <!--<button class="button white">Adcionar nova Palavra</button>-->
-        </div>       
-      </div>     
+  <div class="modal">
+    <div id="box">
+      <img src="./image/img_home.png" id="img-home" alt="imagem forca"> 
+      <div class="box-button">
+      <button class="button blue">Começar a jogar</button>
+      <!--<button class="button white">Adcionar nova Palavra</button>-->
+      </div> 
+    </div>              
+  </div> 
+
+  <body>        
   <header> 
     <img src="./image/logo_alura.svg" alt="logo alura">       
       <h1>JOGO DA FORCA</h1>      
@@ -36,7 +39,7 @@
     <div class="container-jogo">    
       <div class="container">
         <canvas width="220" height="380"></canvas>
-      </div>
+      </div class="input-letras">
       <div id='teste'></div>
       </div> 
   </div>

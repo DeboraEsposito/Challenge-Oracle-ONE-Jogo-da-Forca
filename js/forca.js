@@ -1,27 +1,30 @@
-var palavraSorteada = [];
+//Variaáveis
+
 var palavras = ["BANANA", "AMENDOIN", "ALURA", "CIDADE", "PREDINISOLONA", "CARRO", "FAZENDA", "AVENIDA", "UNIDADE", "SECULO"]; 
+var palavraSorteada = [];
 var contador = 0;
 var novaPalavra;
+var botão = document.querySelector('.blue');
+var modal = document.querySelector(".modal");
+var input = document.querySelector('.input-letras');  
+var inputLetra = document.createElement('input'); 
+  
+//Jogo
 
+botão.addEventListener('click', function (event){
 
-
-botaoJogar.addEventListener("click", function startGame(event){
   event.preventDefault();
-  botão = document.querySelector('.blue');
 
- modal = document.querySelector(".modal")
-
- 
-
-  sorteiaPalavra();
-  dividePalavra();
-  criaInputLetra();
-
-
+  palavraSorteada = [];
     
-})
+    modal.classList.remove("modal");
+    modal.style.zIndex = -1;
+    dividePalavra();
+    criaInputLetra(); 
 
+}, false);
 
+//Functions
  
 function sorteiaPalavra(){
   while(palavraSorteada.length < 1){
@@ -34,7 +37,7 @@ function sorteiaPalavra(){
 }
 
 function dividePalavra(){ 
-  sorteiaPalavra(); 
+ 
   
   novaPalavra = palavraSorteada[0].split("");
   
@@ -42,12 +45,21 @@ function dividePalavra(){
 }
 
 function criaInputLetra(){
-  
+
+  for(i = 0; i < novaPalavra.length; i++){
     var inputLetra = document.createElement('input');
-    var div = document.getElementById('teste')
+    var div = document.getElementById('teste');
     inputLetra.classList.add("input-letras");
-    div.appendChild(inputLetra);    
-  }   
+    div.appendChild(inputLetra);
+    inputLetra.style.left = 20 + "px";   
+
+    return inputLetra;
+     
+  }  
+} 
+
+
+
 
   
 
