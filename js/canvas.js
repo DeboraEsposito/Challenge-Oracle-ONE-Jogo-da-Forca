@@ -35,7 +35,7 @@ function desenhaBracoE(){
   pincel.stroke();
 }
 
-function desenhapernaE(){
+function desenhaPernaE(){
   pincel.fillStyle = 'brown';
   pincel.beginPath();
   pincel.moveTo(220, 265 );
@@ -54,13 +54,31 @@ function desenhaPernaD(){
 desenhaRetangulo(60, 70, 20, 330, "brown");
 desenhaRetangulo(50, 80, 180, 20, "brown");
 desenhaRetangulo(180, 99, 2, 80, "brown");
-desenhaCirculo(180, 150, 18, "black")
-desenhaCirculo(180, 150, 16, "white")
-desenhaRetangulo(178, 168, 3, 60, "black");
-desenhaBracoD()
+
+
+function desenha(contador){
+  if(contador === 1){
+    desenhaCirculo(180, 150, 18, "black")
+    desenhaCirculo(180, 150, 16, "white")
+  } else if(contador === 2){
+    desenhaRetangulo(178, 168, 3, 60, "black");
+  } else if(contador === 3){
+    desenhaBracoD()
+  }else if(contador === 4){
+    desenhaBracoE()
+  }else if(contador === 5){
+    desenhaPernaE()
+  }else if(contador === 6){
+    desenhaPernaD()
+  }
+
+
+}
+/*
+
 desenhaBracoE()
-desenhapernaE()
-desenhaPernaD()
+
+*/
 
 
 
