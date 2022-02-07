@@ -3,12 +3,17 @@ var palavras = ["BANANA", "AMENDOIN", "ALURA", "CIDADE", "PREDINISOLONA", "CARRO
 var palavraSorteada = [];
 var contador = 0;
 var novaPalavra;
-var botao = document.querySelector('.blue');
+var botaoIniciarJogo = document.querySelector('.blue');
 var modal = document.querySelector(".modal");
 var input = document.querySelector('.input-letras');  
 var inputLetra = document.createElement('input'); 
-botaoAdicionaPalavra = document.querySelector(".white")
-var contador = 0;
+var botaoAdicionaPalavra = document.querySelector(".white")
+var erros = 0;
+var acertos = 0;
+var botaoNovoJogo = document.querySelector("#start")
+var exibeGameOver = document.querySelector("#over")
+var exibeWin = document.querySelector("#win")
+var botaoWin = document.querySelector("#winB")
 
 //Teclado
 
@@ -16,19 +21,22 @@ var contador = 0;
 
 //Jogo
 
-botao.addEventListener('click', function (event){
 
-  event.preventDefault();
+  botaoIniciarJogo.addEventListener('click', function startGame(event){
 
-  palavraSorteada = [];
-    
-    modal.classList.remove("modal");
-    modal.style.zIndex = -1;
-    sorteiaPalavra();
-    dividePalavra();
-    criaInputLetra();
+    event.preventDefault();
+  
+    palavraSorteada = [];
+      
+      modal.classList.remove("modal");
+      modal.style.zIndex = -3;
+      box.style.zIndex = -3
+      sorteiaPalavra();
+      dividePalavra();
+      criaInputLetra();
+  
+  }, false);
 
-}, false);
 
 //Functions
  
@@ -73,12 +81,21 @@ botaoAdicionaPalavra.addEventListener("click", function adcionarPalavra(event){
     
 })
 
-// letraA = document.querySelector("#button-letra0");
-// letraA.addEventListener('click', function(){
-//   var letraDigitada = a;
+function gameOver(){
+  exibeGameOver.style.zIndex = 3;
+  botaoNovoJogo.addEventListener('click', function(){
+    document.location.reload(true);
 
-//   console.log(letraDigitada)
-// })
+  }, false)
+}
+
+function gameWin(){
+  exibeWin.style.zIndex = 3;
+  botaoWin.addEventListener('click', function(){
+  document.location.reload(true);
+  }, false)
+}
+
 
 var letraClicada = document.querySelectorAll('.button-letra')
 var divs = document.querySelector('#butons-letras') 
@@ -92,22 +109,34 @@ divs.addEventListener('click',(event)=>{
   var inputAll = document.querySelectorAll(".input-palavra");
 
   var valida = true;
+
   
   for(i = 0; i < novaPalavra.length; i++){
     if(letra === novaPalavra[i]){
       valida = false;
       inputAll[i].value = letra;
-      event.target.style.backgroundColor = "green"
+      event.target.style.backgroundColor = "rgba(14, 238, 6, 0.89)"
+      acertos++;
+      
+      if(acertos === novaPalavra.length){
+        gameWin();
+
+      }
+
     }
   }
-
-  if(valida){
-    event.target.style.backgroundColor = "red"
-    contador++;
-    desenha(contador);
-  }  
   
-})
+  if(valida){
+    event.target.style.backgroundColor = "rgba(255, 0, 0, 0.89)"
+    erros++;
+    desenha(erros);   
+    if(erros === 6){
+      gameOver();
+    }
+  }
+  
+}, false);
+
 
 
 

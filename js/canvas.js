@@ -53,32 +53,28 @@ function desenhaPernaD(){
 
 desenhaRetangulo(60, 70, 20, 330, "brown");
 desenhaRetangulo(50, 80, 180, 20, "brown");
-desenhaRetangulo(180, 99, 2, 80, "brown");
+desenhaRetangulo(180, 99, 2, 60, "brown");
 
 
-function desenha(contador){
-  if(contador === 1){
+function desenha(erros){
+  if(erros === 1){
     desenhaCirculo(180, 150, 18, "black")
     desenhaCirculo(180, 150, 16, "white")
-  } else if(contador === 2){
+  } else if(erros === 2){
     desenhaRetangulo(178, 168, 3, 60, "black");
-  } else if(contador === 3){
+  } else if(erros === 3){
     desenhaBracoD()
-  }else if(contador === 4){
+  }else if(erros === 4){
     desenhaBracoE()
-  }else if(contador === 5){
+  }else if(erros === 5){
     desenhaPernaE()
-  }else if(contador === 6){
+  }else if(erros === 6){
     desenhaPernaD()
   }
-
-
 }
-/*
 
-desenhaBracoE()
 
-*/
+
 
 
 
