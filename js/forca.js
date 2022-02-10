@@ -1,5 +1,5 @@
 //Variaáveis
-var palavras = ["BANANA", "AMENDOIN", "ALURA", "CIDADE", "PREDINISOLONA", "CARRO", "FAZENDA", "AVENIDA", "UNIDADE", "SECULO"]; 
+var palavras = ["BANANA", "AMENDOIN", "ALURA", "CIDADE", "PREDINISOLONA", "CARRO", "FAZENDA", "AVENIDA", "UNIDADE", "SECULO", "SALADA", "MEDO", "PASSARO", "URSO", "MEL", 'CHAPEU', 'CHAVE', 'EXPORTAR', 'ORACLE', 'JAVA']; 
 var palavraSorteada = [];
 var contador = 0;
 var novaPalavra;
